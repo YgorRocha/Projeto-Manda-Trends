@@ -1,13 +1,369 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manda Trends</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manda Trend</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+      :root {
+        font-size: 62.5%;
+      }
+    
+      /* Mobile first */
+      
+      body {
+        padding: 1rem;
+        background: gainsboro;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    
+      /* HEADER */
+    
+      header {
+        background: linear-gradient(to left, #e42552, #e42552, #ec4a2c, #ec4434, #ec3c34);
+        height: 13.8rem;
+        width: 100%;
+        margin: 0 auto 2rem;
+        position: relative;
+      }
+    
+      header #Logo-manda-trends {
+        position: absolute;
+        top: 0.2rem;
+        left: -3rem;
+        scale: 0.5;
+      }
+    
+      header #Vector-seta {
+        position: absolute;
+        top: 1.5rem;
+        left: 50%;
+      }
+    
+      header #mulher {
+        position: absolute;
+        top: 4.8rem;
+        right: 33%;
+        width: 13rem;
+      }
+    
+      header #Dots-object {
+        scale: 0.8;
+        position: absolute;
+        top: 2rem;
+        left: -3rem;
+      }
+    
+      header #Dots-square {
+        width: clamp(4rem, 5vw, 5rem);
+        position: absolute;
+        bottom: -4rem;
+        right: 75%;
+      }
+    
+      header #triangle {
+        width: clamp(2rem, 3.3vw, 3rem);
+        position: absolute;
+        top: 0.1rem;
+        right: 1.5rem;
+      }
+    
+      header .wrapper-p {
+        color: #FFFF;
+      }
+    
+      header p:nth-child(1) {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+      }
+    
+      header p:nth-child(2) {
+        position: absolute;
+        top: 3.7rem;
+        right: 2rem;
+      }
+    
+      header p:nth-child(3) {
+        position: absolute;
+        top: 5.4rem;
+        right: 2rem;
+      }
+    
+      header p:nth-child(4) {
+        position: absolute;
+        top: 8.9rem;
+        right: 2rem;
+        font-size: 1.2rem;
+      }
+    
+      #zigZag {
+        position: absolute;
+        top: 11rem;
+        right: 2rem;
+      }
+    
+      /* MAIN */
+    
+      .container {
+        max-width: 700px;
+        min-width: 310px;
+        margin: 0 auto;
+        position: relative;
+        background: white;
+      }
+    
+      main {
+        max-width: 500px;
+        margin: 0 auto;
+        position: absolute;
+        position: relative;
+        text-align: center;
+        padding: 0.5rem;
+      }
+    
+      main img {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    
+      h1 {
+        font-size: 2.3rem;
+        margin-bottom: 1.1rem;
+        font-weight: bold;
+      }
+    
+      main p {
+        color: rgb(124, 124, 124);
+        font-size: 1.4rem;
+      }
+    
+      /* MAIN CARDS */
+    
+      main .font {
+        font-style: italic;
+        font-size: 1rem;
+        color: rgb(170, 170, 170);
+        margin: 1.5rem auto 1rem;
+      }
+    
+      main .lineBreak {
+        width: 48%;
+      }
+    
+      main .lineBreak-news {
+        width: 62%;
+      }
+    
+      main .cards #kobeBryant,
+      main .cards #whatsApp {
+        max-width: 30rem;
+        margin: 2rem auto 1rem;
+      }
+    
+      main .cards h2 {
+        font-size: 1.8rem;
+      }
+    
+      /* FOOTER */
+    
+      footer #banner {
+        background: #fc4c04;
+        height: 7rem;
+        margin: 0 auto 0;
+        width: 100%;
+        max-width: 70rem;
+        min-width: 310px;
+      }
+    
+      footer #logoSign {
+        margin: 1rem 5rem;
+        width: 70%;
+        max-width: 300px;
+      }
+    
+      footer #rodape {
+        margin: 2rem auto;
+        bottom: -1rem;
+        height: 5rem;
+        text-align: center;
+        max-width: 32rem;
+      }
+    
+      footer #rodape a {
+        color: inherit;
+      }
+    
+      footer #rodape a:hover {
+        font-weight: bold;
+      }
+    
+      /* Mínimo de 465px */
+    
+      @media only screen and (min-width: 465px) {
+        header {
+          font-size: clamp(1rem, 3vw, 1.5rem);
+        }
+    
+        .wrapper-p p {
+          font-size: clamp(1rem, 3vw, 1rem);
+        }
+    
+        header #Logo-manda-trends {
+          top: 3rem;
+          left: 0rem;
+          transform: scale(1.8);
+        }
+    
+        header #Dots-square {
+          bottom: -4rem;
+          right: 60%;
+        }
+    
+        footer #logoSign {
+          max-width: 300px;
+          margin-left: 8rem;
+          transform: scale(0.7);
+        }
+      }
+    
+      /* Mínimo de 520px */
+    
+      @media only screen and (min-width: 520px) {
+        main {
+          text-align: left;
+          max-width: 550px;
+        }
+    
+        .cards {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 2rem;
+          max-width: 70rem;
+        }
+    
+        .cards #kobeBryant,
+        .cards #whatsApp {
+          height: 18.7rem;
+          width: 100%;
+          transition: height 0.3s;
+        }
+    
+        .cards #news-whatsapp {
+          margin-bottom: 1rem;
+        }
+    
+        main .lineBreak {
+          margin-bottom: 2rem;
+        }
+    
+        /* FOOTER MIN 520PX */
+    
+        footer #banner {
+          height: 8rem;
+          margin: 0 auto 0;
+          width: 100%;
+          max-width: 700px;
+          padding-left: 6rem;
+          background: #fc4c04;
+        }
+    
+        footer #logoSign {
+          max-width: 300px;
+          scale: 0.7;
+          margin-left: 4rem;
+        }
+      }
+    
+      /* Mínimo de 603px */
+    
+      @media only screen and (min-width: 603px) {
+        header {
+          font-size: clamp(1rem, 3vw, 1.5rem);
+        }
+    
+        .wrapper-p p {
+          font-size: clamp(1rem, 3vw, 1.5rem);
+        }
+    
+        header {
+          height: 15.4rem;
+          width: 100%;
+          margin: 0 auto 2rem;
+          position: relative;
+        }
+    
+        header #Logo-manda-trends {
+          top: 4rem;
+          left: 4rem;
+          transform: scale(2.2);
+        }
+    
+        header #mulher {
+        top: 4.8rem;
+        right: 30%;
+        width: 15rem;
+      }
+    
+        header #Dots-square {
+          bottom: -5rem;
+          right: 55%;
+        }
+    
+        header #Vector-seta {
+          top: 10%;
+          left: 45%;
+          transform: translate(-50%, -50%);
+          transform: scale(1.1);
+        }
+    
+        header p:nth-child(1) {
+          top: 3rem;
+          right: 5rem;
+        }
+    
+        header p:nth-child(2) {
+          top: 4.7rem;
+          right: 5rem;
+        }
+    
+        header p:nth-child(3) {
+          top: 6.4rem;
+          right: 5rem;
+        }
+    
+        header p:nth-child(4) {
+          top: 9.9rem;
+          right: 5rem;
+        }
+    
+        #zigZag {
+          top: 12rem;
+          right: 5rem;
+        }
+    
+        /* FOOTER MIN 600PX */
+    
+        footer #banner {
+          padding-left: 16rem;
+        }
+    
+        footer #logoSign {
+          max-width: 300px;
+          scale: 1.2;
+        }
+      }
+    </style>
+    
+  </head>
+  <body>
     
     <div class="container">
         <header>
@@ -75,8 +431,3 @@
     
 </body>
 </html>
-                
-        
-
-    
-        
